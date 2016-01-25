@@ -5,6 +5,7 @@
 <table>
   <thead>
     <tr>
+      <th>Product name</th>
       <th>Product sku</th>
       <th>Quantity</th>
       <th>Expiration date</th>
@@ -14,7 +15,9 @@
 
   <tbody>
     <% @items.each do |item| %>
+      <% #prod = @product.each { |product| product.name if product.SKU == item.Product_SKU } %>
       <tr>
+        <td>Product Name</td>
         <td><%= item.Product_SKU %></td>
         <td><%= item.Quantity %></td>
         <td><%= item.Expiration_Date %></td>
@@ -29,3 +32,5 @@
 <br>
 
 <%= link_to 'New Item', new_item_path %>
+<br>
+<%= link_to 'View Products', products_path %>
