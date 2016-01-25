@@ -1,0 +1,19 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Product sku:</strong>
+  <%= @item.Product_SKU %>
+</p>
+
+<p>
+  <strong>Quantity:</strong>
+  <%= @item.Quantity %>
+</p>
+
+<p>
+  <strong>Expiration date:</strong>
+  <%= @item.Expiration_Date %>
+</p>
+
+<%= link_to 'Edit', edit_item_path(@item) %> |
+<%= link_to 'Back', items_path %>
