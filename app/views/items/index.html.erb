@@ -15,9 +15,10 @@
 
   <tbody>
     <% @items.each do |item| %>
-      <% #prod = @product.each { |product| product.name if product.SKU == item.Product_SKU } %>
+      <% prod = ''
+         @products.each { |product| prod = product.Product_Name if product.SKU == item.Product_SKU } %>
       <tr>
-        <td>Product Name</td>
+        <td><%= prod %></td>
         <td><%= item.Product_SKU %></td>
         <td><%= item.Quantity %></td>
         <td><%= item.Expiration_Date %></td>

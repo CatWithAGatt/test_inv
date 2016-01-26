@@ -1,3 +1,3 @@
 class Item < ActiveRecord::Base
-	belongs_to :product, foreign_key: "Product_SKU"
+	belongs_to :product, foreign_key: "product_id"
 end
